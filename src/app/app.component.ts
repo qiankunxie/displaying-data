@@ -7,6 +7,9 @@ import {Hero} from './hero';
 	  <h1>{{title}}</h1>
 	  <h2>My favorite hero is: {{myHero.name}}</h2>
 	  <p>Heroes:</p>
+	  <input [value]="title">
+	  <input [value]="myHero.name"
+       (input)="myHero.name=$event.target.value" >
 	  <ul>
 	    <li *ngFor="let hero of heroes">
 	      {{ hero.name }}
